@@ -1,4 +1,4 @@
 number=int(input("Enter a number to see its multiplication table: "))
-for x in range(1,2) :
-    for x in range(1,11):
-        print(f"{number} * {x} = {number * x}")
+for i in range(1, 10 + 1):
+        result = number * i
+        print(f"{number} * {i} = {result}")
