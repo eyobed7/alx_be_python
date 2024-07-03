@@ -1,13 +1,14 @@
 def perform_operation(num1,num2,operation):
     if operation =="add":
         return num1 + num2
-    if operation =="multiply":
+    elif operation =="multiply":
         return num1 * num2
-    if operation =="subtract":
+    elif operation =="subtract":
         return num1 - num2
-    if operation =="divide":
+    elif operation =="divide":
         if num2==0:
-            print('no operation')
+            return 'no operation will be done '
         else:
             return num1 / num2
-        
+    return 'insert the correct symbol"
+     
