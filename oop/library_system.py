@@ -16,10 +16,20 @@ class Library:
     def add_book(self,book):
         self.book.append(book)
     def list_books(self):
-        for book in self.books:
+        for book in self.book:
             if isinstance(book, EBook):
                 print(f"EBook: {book.title} by {book.author}, File Size: {book.file_size}KB")
             elif isinstance(book, PrintBook):
                 print(f"PrintBook: {book.title} by {book.author}, Page Count: {book.page_count}")
             else:
                 print(f"Book: {book.title} by {book.author}")
+    def __str__(self):
+        book_list = []
+        for book in self.book:
+            if isinstance(book, EBook):
+                book_list.append(f"EBook: {book.title} by {book.author}, File Size: {book.file_size}KB")
+            elif isinstance(book, PrintBook):
+                book_list.append(f"PrintBook: {book.title} by {book.author}, Page Count: {book.page_count}")
+            else:
+                book_list.append(f"Book: {book.title} by {book.author}")
+        return "\n".join(book_list)
